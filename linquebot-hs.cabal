@@ -54,6 +54,7 @@ library
     , random
     , raw-strings-qq
     , relude
+    , telegram-bot-api >=7.4.4
   default-language: Haskell2010
 
 executable linquebot-hs-exe
@@ -79,6 +80,7 @@ executable linquebot-hs-exe
     , random
     , raw-strings-qq
     , relude
+    , telegram-bot-api >=7.4.4
   default-language: Haskell2010
 
 test-suite linquebot-hs-test
@@ -105,4 +107,5 @@ test-suite linquebot-hs-test
     , random
     , raw-strings-qq
     , relude
+    , telegram-bot-api >=7.4.4
   default-language: Haskell2010

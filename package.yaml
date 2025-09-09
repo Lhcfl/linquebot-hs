@@ -33,6 +33,7 @@ dependencies:
 - rainbow >= 0.34.0.0
 - raw-strings-qq
 - random
+- telegram-bot-api >= 7.4.4
 
 ghc-options:
 - -Wall
