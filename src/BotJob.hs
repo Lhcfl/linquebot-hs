@@ -1,4 +1,4 @@
-module BotJob (BotJob, BotJobResult(..), runJobs) where
+module BotJob (BotJob, BotJobResult (..), runJobs) where
 
 import Context
 import Relude

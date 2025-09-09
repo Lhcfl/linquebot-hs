@@ -1,7 +1,7 @@
-module Context (Context(..)) where
+module Context (Context (..)) where
 
-import Relude
 import Bot
+import Relude
 
 data Context = MkContext
   { botName :: String,

@@ -1,12 +1,12 @@
-module Application (Application(..), runMainLoop) where
+module Application (Application (..), runMainLoop) where
 
-import Context
-import Relude
+import AppConfig
 import Bot
 import BotJob
-import AppConfig
-import Lib (splitCommand)
+import Context
 import qualified Data.Text as T
+import Lib (splitCommand)
+import Relude
 
 data Application = MkApplication
   { jobs :: [BotJob],
@@ -28,4 +28,3 @@ runMainLoop cfg app = do
           _ -> Nothing
       }
   runMainLoop cfg app
-

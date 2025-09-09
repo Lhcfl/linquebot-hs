@@ -1,9 +1,9 @@
 module Jobs.Echo (echojob) where
 
-import BotJob
 import Bot
-import Relude
+import BotJob
 import Context
+import Relude
 
 echojob :: BotJob
 echojob = do

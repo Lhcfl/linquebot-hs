@@ -1,5 +1,5 @@
 module Bot
-  ( Bot(..),
+  ( Bot (..),
     testBot,
     sendMessage,
   )

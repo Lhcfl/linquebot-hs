@@ -1,9 +1,9 @@
 module Jobs.Rand (randjob) where
 
-import BotJob
 import Bot
-import Relude
+import BotJob
 import Context
+import Relude
 import System.Random
 
 randjob :: BotJob

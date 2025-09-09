@@ -10,8 +10,8 @@ import qualified Jobs.Rand (randjob)
 import Relude
 
 botJobs :: [BotJob]
-botJobs = [
-    Jobs.Echo.echojob,
+botJobs =
+  [ Jobs.Echo.echojob,
     Jobs.Rand.randjob
   ]
 
