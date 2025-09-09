@@ -47,8 +47,8 @@ jobs:
         echo "Project name: $PROJECT_NAME"
 
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ steps.project_info.outputs.project_name }}-release
         path: release/
-        retention-days: 30
+        retention-days: 7
