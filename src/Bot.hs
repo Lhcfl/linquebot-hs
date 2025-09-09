@@ -8,16 +8,14 @@ where
 import Relude
 
 data Bot = Bot
-  { name :: String
+  { name :: Text
   }
 
-testBot :: String -> Bot
+testBot :: Text -> Bot
 testBot bname =
   Bot
     { name = bname
     }
 
 sendMessage :: Text -> Bot -> IO ()
-sendMessage msg b = do
-  putStr $ "[" ++ name b ++ "]: "
-  putTextLn msg
+sendMessage msg b = putTextLn $ "[" <> b.name <> "]: " <> msg

@@ -19,7 +19,7 @@ main :: IO ()
 main = do
   sayHi
   config <- readAppConfigOrExit
-  putStrLn $ "Config: " <> show config
+  putTextLn $ "Config: " <> show config
   runMainLoop
     config
     MkApplication

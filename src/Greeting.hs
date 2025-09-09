@@ -24,4 +24,4 @@ linquebot =
 sayHi :: IO ()
 sayHi = do
   putText $ linquebot
-  putChunkLn $ fore blue $ fromString $ "version: " ++ showVersion version
+  putChunkLn $ fore blue $ fromString $ "version: " <> showVersion version

@@ -4,7 +4,7 @@ import Bot
 import Relude
 
 data Context = MkContext
-  { botName :: String,
+  { botName :: Text,
     message :: Text,
     command :: Maybe (Text, Text), -- (command, args)
     bot :: Bot
