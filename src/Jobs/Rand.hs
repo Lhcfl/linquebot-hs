@@ -1,7 +1,9 @@
 module Jobs.Rand (randjob) where
 
+import BotJob
 import Bot
 import Relude
+import Context
 import System.Random
 
 randjob :: BotJob
@@ -10,8 +12,7 @@ randjob = do
   case command context of
     Just ("rand", text) -> liftIO $ do
       rp <- randomRIO (1, 100 :: Int)
-      context
-        & bot
+      context.bot
         & sendMessage
           ( if text == ""
               then "你抛出了：" <> show rp

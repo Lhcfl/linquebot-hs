@@ -1,22 +1,28 @@
 module Main (main) where
 
-import App (readAppConfigOrExit)
+import AppConfig
+import Application
 import Bot
+import BotJob
 import Greeting (sayHi)
 import qualified Jobs.Echo (echojob)
 import qualified Jobs.Rand (randjob)
 import Relude
+
+botJobs :: [BotJob]
+botJobs = [
+    Jobs.Echo.echojob,
+    Jobs.Rand.randjob
+  ]
 
 main :: IO ()
 main = do
   sayHi
   config <- readAppConfigOrExit
   putStrLn $ "Config: " <> show config
-  runbot
+  runMainLoop
     config
-    Application
-      { jobs =
-          [ Jobs.Echo.echojob,
-            Jobs.Rand.randjob
-          ]
+    MkApplication
+      { jobs = botJobs,
+        bot = testBot config.botName
       }

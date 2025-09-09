@@ -25,8 +25,11 @@ source-repository head
 
 library
   exposed-modules:
-      App
+      AppConfig
+      Application
       Bot
+      BotJob
+      Context
       Greeting
       Jobs.Echo
       Jobs.Rand
@@ -40,6 +43,9 @@ library
   default-extensions:
       NoImplicitPrelude
       OverloadedStrings
+      DuplicateRecordFields
+      OverloadedRecordDot
+      PatternGuards
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
@@ -61,6 +67,9 @@ executable linquebot-hs-exe
   default-extensions:
       NoImplicitPrelude
       OverloadedStrings
+      DuplicateRecordFields
+      OverloadedRecordDot
+      PatternGuards
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
@@ -84,6 +93,9 @@ test-suite linquebot-hs-test
   default-extensions:
       NoImplicitPrelude
       OverloadedStrings
+      DuplicateRecordFields
+      OverloadedRecordDot
+      PatternGuards
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5

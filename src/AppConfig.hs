@@ -1,6 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module App
+module AppConfig
   ( readAppConfig,
     readAppConfigOrExit,
     AppConfig (..),
